@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>NFL Combine</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+</head>
+
+<body>
+  <div class="container-fluid">
+    <div class="jumbotron text-center">
+      <h1>NFL Combine Data</h1>
+      <p>Links</p>
+      {% for j in api_route %}
+                <a href="{{j}}" style="text-align:center; color: royalblue"><p>{{j}}</p></a>
+      {% endfor%}
+    </div>
+  </div>
+    
+    <h2>Graphs</h2>
+    <img src="#" alt="NFL">
+    <p1> </p1>
+    <img src="#" alt="NFL">
+    <img src="#" alt="NFL">
+  </div>
+  </div>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+</body>
+
+</html>
