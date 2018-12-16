@@ -42,25 +42,35 @@ def names():
     return jsonify(all_names)
 
 @app.route("/api/v1.0/info")
-def info():
- 
-    
-    results = session.query(combine).all()
-
-    all_info = []
-    for all_info in results:
+def info():   
+position = session.query(combine.position).all()
+positions = list(np.ravel(position))
+height = session.query(combine.height).all()
+heights= list(np.ravel(height))
+weight = session.query(combine.weight).all()
+weights= list(np.ravel(weight))
+fortyyd= session.query(combine.fortyyd).all()
+fortyyds= list(np.ravel(fortyyd))
+vertical= session.query(combine.vertical).all()
+verticals=list(np.ravel(vertical))
+college= session.query(combine.college).all()
+colleges=list(np.ravel(college))
+nflgrade= session.query(combine.nflgrade).all()
+nflgrades=list(np.ravel(nflgrade))
+pick= session.query(combine.pick).all()
+picks=list(np.ravel(pick))   
         info_dict = {}
-        info_dict["position"] = combine.position
-        info_dict["Height"] = combine.Height
-        info_dict["weight"] = combine.weight
-        info_dict["fortyyd"] = combine.fortyyd
-        info_dict["vertical"] = combine.vertical
-        info_dict["college"] = combine.college
-        info_dict["nflgrade"] = combine.nflgrade
-        info_dict["pick"] = combine.pick
-        all_info.append(info_dict)
+        info_dict["position"] = positions
+        info_dict["Height"] = heights
+        info_dict["weight"] = weights
+        info_dict["fortyyd"] = fortyyds
+        info_dict["vertical"] = verticals
+        info_dict["college"] = colleges
+        info_dict["nflgrade"] = nflgrades
+        info_dict["pick"] = picks
+        
 
-        return jsonify(all_info)
+        return jsonify(info_dict)
 
 if __name__ == '__main__':
     app.run(debug=False)
