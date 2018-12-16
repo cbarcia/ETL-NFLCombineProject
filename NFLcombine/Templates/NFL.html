@@ -33,7 +33,7 @@
         <div class="container-fluid">
             <!-- Brand and toggle get grouped for better mobile display -->
             <div class="navbar-header">
-                <a class="navbar-brand page-scroll" href="#page-top">NFL Combine</a>
+                <a class="navbar-brand page-scroll" href="#page-top" >NFL Combine</a>
             </div>
     </nav>
 
@@ -47,15 +47,28 @@
           <div class="col-lg-8 mx-auto">
             <a class="btn btn-primary btn-xl js-scroll-trigger" href="/api/v1.0/fullname">Players</a>
             <a class="btn btn-primary btn-xl js-scroll-trigger" href="/api/v1.0/info">Player Bio</a>
-            <a class="btn btn-primary btn-xl js-scroll-trigger" href="#">ETL: Overview</a>
             <h2>Graphs</h2>
-            <img src="#" alt="NFL">
-            <img src="#" alt="NFL">
-            <img src="#" alt="NFL">
-
+            <div class= "col-lg-4 col-sm-6">
+            <a class= "portfolio-box">
+              <img class="img-fluid" src="{{url_for('static', filename='images/40ydvbench.png')}}" alt="Bench vs 40 comparison" alt="">
+                  <div class="project-name">
+                    40 yd V Bench
+                    </a>
+                </div>
+                  <a class= "portfolio-box">
+              <img class="img-fluid" src="{{url_for('static', filename='images/40ydvweight.png')}}" alt="Bench vs 40 comparison" alt="">
+                  <div class="project-name">
+                    40 yd V Weight
+                    </a>
+                  </div>
+                  <a class= "portfolio-box">
+              <img class="img-fluid" src="{{url_for('static', filename='images/DraftOrder_NFLGrade.png')}}" alt="Bench vs 40 comparison" alt="">
+                  <div class="project-name">
+                    Draft Order vs Grade
+            </a>
           </div>
-        </div>
-      </div>
+          </div>
+        
     </header>
 
     <!-- jQuery -->
