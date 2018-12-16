@@ -30,11 +30,7 @@ app = Flask(__name__)
 @app.route('/')
 def welcome():
     """NFL COMBINE DATA `99-2015"""
-    api_route = [
-            "/api/v1.0/fullname",
-            "/api/v1.0/info",
-    ]
-    return render_template("NFL.html", api_route = api_route)
+    return render_template("NFL.html")
 
 @app.route("/api/v1.0/fullname")
 def names():
